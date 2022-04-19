@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AlbVerHoy.BlogAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     public class UsersController : Controller
     {
         readonly UsersService _usersService;
@@ -30,7 +30,7 @@ namespace AlbVerHoy.BlogAPI.Controllers
             await _usersService.CreateUserAsync(user);
 
         [HttpPut]
-        public async ValueTask<User> UpdateUserAsync([FromBody] User user) =>
+        public async ValueTask<User> UpdateUserAsync([FromBody]User user) =>
             await _usersService.UpdateUserAsync(user);
 
         [HttpDelete("{id}")]

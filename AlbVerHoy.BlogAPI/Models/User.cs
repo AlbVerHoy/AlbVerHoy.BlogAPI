@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 namespace AlbVerHoy.BlogAPI.Models
 {
-    public class User: Item
+    public class User : Item
     {
         [JsonProperty(PropertyName = "email")]
         [Required]

@@ -26,6 +26,7 @@ namespace AlbVerHoy.BlogAPI
                 options.DatabaseId = Configuration["Cosmos:DatabaseId"];
             });
             services.AddSingleton<UsersService>();
+            services.AddSingleton<PostsService>();
 
             services.AddControllers();
         }
